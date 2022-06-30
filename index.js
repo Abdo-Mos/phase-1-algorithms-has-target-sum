@@ -1,5 +1,22 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // first loop to iterate over the array.length
+  for(let i = 0; i < array.length; i++) {
+    // assign current array value
+    const currentArr = array[i]
+    // subtract the targeted value from the current array
+    const difference = target - currentArr
+    // second for loop 
+      // adding one to the current array possition 
+    for(let j = i + 1; j < array.length; j++) {
+      // getting the current possition of the array with the added one 
+      const currentArrJ = array[j]
+      // checking if currentArrJ is equal to the difference
+        // it true retiurn true 
+      if(currentArrJ === difference) { return true }
+    }
+  }
+  // return false if the difference does not equal the number
+  return false
 }
 
 /* 
